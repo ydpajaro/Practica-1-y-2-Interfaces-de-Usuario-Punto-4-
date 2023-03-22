@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyConverterApp</string>
+    <string name="title_text_view">Conversor de Monedas</string>
+    <string name="coin_value_input_text">Ingrese valor de la moneda</string>
+    <string name="dollar_peso_button">USD - dólar  convertir COP - peso</string>
+    <string name="dollar_eur_button">USD - dólar  convertir EUR - euro</string>
+    <string name="peso_eur_button">COP - peso convertir EUR - euro </string>
+    <string name="peso_dollar_button">COP - peso convertir USD - dólar </string>
+    <string name="euro_dollar_button">EUR - euro convertir USD - dólar </string>
+    <string name="euro_peso_button">EUR - euro convertir COP - peso </string>
+    <string name="total">Total: </string>
+
+
+</resources>
