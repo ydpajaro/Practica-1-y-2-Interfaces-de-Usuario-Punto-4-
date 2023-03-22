@@ -17,33 +17,72 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
 
         mainBinding.dolarPesoButton.setOnClickListener {
+            if(mainBinding.valorInputEditText.text.toString()=="."){
+                mainBinding.valorInputEditText.error = "Total: Ingresa un valor númerico."
+            }else if(mainBinding.valorInputEditText.text.toString()=="") {
+                mainBinding.valorInputEditText.error = "Total: El campo está vacío."
+            }else{
+                valor = dolar2peso(mainBinding.valorInputEditText.text.toString().toDouble())
+                mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
+            }
 
-            valor = dolar2peso(mainBinding.valorInputEditText.text.toString().toDouble())
-            mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
+
         }
         mainBinding.dolarEuroButton.setOnClickListener {
+            if(mainBinding.valorInputEditText.text.toString()=="."){
+                mainBinding.valorInputEditText.error = "Total: Ingresa un valor númerico."
+            }else if(mainBinding.valorInputEditText.text.toString()=="") {
+                mainBinding.valorInputEditText.error = "Total: El campo está vacío."
+            }else{
+                valor = dolar2euro(mainBinding.valorInputEditText.text.toString().toDouble())
+                mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
+            }
 
-            valor = dolar2euro(mainBinding.valorInputEditText.text.toString().toDouble())
-            mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
         }
         mainBinding.pesoDolarButton.setOnClickListener {
+            if(mainBinding.valorInputEditText.text.toString()=="."){
+                mainBinding.valorInputEditText.error = "Total: Ingresa un valor númerico."
+            }else if(mainBinding.valorInputEditText.text.toString()=="") {
+                mainBinding.valorInputEditText.error = "Total: El campo está vacío."
+            }else{
+                valor = peso2dolar(mainBinding.valorInputEditText.text.toString().toDouble())
+                mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
+            }
 
-            valor = peso2dolar(mainBinding.valorInputEditText.text.toString().toDouble())
-            mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
         }
         mainBinding.pesoEuroButton.setOnClickListener{
+            if(mainBinding.valorInputEditText.text.toString()=="."){
+                mainBinding.valorInputEditText.error = "Total: Ingresa un valor númerico."
+            }else if(mainBinding.valorInputEditText.text.toString()=="") {
+                mainBinding.valorInputEditText.error = "Total: El campo está vacío."
+            }else{
+                valor = peso2euro(mainBinding.valorInputEditText.text.toString().toDouble())
+                mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
+            }
 
-            valor = peso2euro(mainBinding.valorInputEditText.text.toString().toDouble())
-            mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
         }
         mainBinding.euroDolarButton.setOnClickListener {
+            if(mainBinding.valorInputEditText.text.toString()=="."){
+                mainBinding.valorInputEditText.error = "Total: Ingresa un valor númerico."
+            }else if(mainBinding.valorInputEditText.text.toString()=="") {
+                mainBinding.valorInputEditText.error = "Total: El campo está vacío."
+            }else{
+                valor = euro2dolar(mainBinding.valorInputEditText.text.toString().toDouble())
+                mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
+            }
 
-            valor = euro2dolar(mainBinding.valorInputEditText.text.toString().toDouble())
-            mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
         }
         mainBinding.euroPesoButton.setOnClickListener {
-            valor = eurotopeso(mainBinding.valorInputEditText.text.toString().toDouble())
-            mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
+            if(mainBinding.valorInputEditText.text.toString()=="."){
+                mainBinding.valorInputEditText.error = "Total: Ingresa un valor númerico."
+            }else if(mainBinding.valorInputEditText.text.toString()=="") {
+                mainBinding.valorInputEditText.error = "Total: El campo está vacío."
+            }else{
+                valor = eurotopeso(mainBinding.valorInputEditText.text.toString().toDouble())
+                mainBinding.totalTextView.text = "${getString(R.string.total) + " "+  valor}"
+            }
+
+
         }
 
 
